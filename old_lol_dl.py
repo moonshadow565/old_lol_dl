@@ -231,7 +231,7 @@ def select_list(name, selections, key):
 def get_folder():
     folder = input("Select output folder(you can drag and drop): ")
     print('-' * 79)
-    return folder
+    return folder.replace('"', '')
 
 def main(versions):
     realm = select_list('realm', versions, 'realm')
