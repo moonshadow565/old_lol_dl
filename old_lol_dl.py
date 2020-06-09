@@ -239,7 +239,7 @@ def main(versions):
     game_release = select_list('game release', patch['releases'], 'version')
     locale = select_list('locale', game_release['locales'], 'name')
     locale_release = select_list('locale release', locale['releases'], 'version')
-    folder = input("Output folder(drag and drop): ")
+    folder = get_folder()
     print(f"Realm: {realm['realm']}")
     print(f"Patch: {patch['version']}")
     print(f"Game release: {game_release['version']}, md5: {game_release['md5']}")
